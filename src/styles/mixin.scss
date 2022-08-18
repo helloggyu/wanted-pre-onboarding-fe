@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+@mixin flex-align($flex: flex, $align: center, $justify-con: inherit) {
+  display: $flex;
+  align-items: $align;
+  justify-content: $justify-con;
+}
+
+@mixin ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

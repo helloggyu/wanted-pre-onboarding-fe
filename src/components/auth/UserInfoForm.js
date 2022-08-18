@@ -1,12 +1,12 @@
 import React from 'react';
 
+import Textfield from '../common-ui/Textfield';
 const UserInfoForm = () => {
   return (
     <>
-      <form>
-        <input type="text"></input>
-        <input type="text"></input>
-      </form>
+      <div>
+        <Textfield />
+      </div>
     </>
   );
 };
