@@ -1,0 +1,330 @@
+
+$body-font: (
+  body_20r: (
+    size: 20,
+    weight: 400,
+  ),
+  body_16r: (
+    size: 16,
+    weight: 400,
+  ),
+  body_14r: (
+    size: 14,
+    weight: 400,
+  ),
+  body_12r: (
+    size: 12,
+    weight: 400,
+  ),
+);
+
+$caption-font: (
+  caption_10m: (
+    size: 10,
+    weight: 500,
+  ),
+);
+
+
+
+// $btn-line-colors: (
+//   btn-line-primary: (
+//     border: 1px solid #dbdde0,
+//     border-hover: 1px solid #C6C9CE,
+//     color: #29b59b,
+//     color-hover: #29b59b,
+//     background-color: #ffffff,
+//   ),
+//   btn-line-secondary: (
+//     border: 1px solid #dbdde0,
+//     border-hover: 1px solid #C6C9CE,
+//     color: #1c1d1e,
+//     color-hover: #1c1d1e,
+//     background-color: #ffffff,
+//   ),
+//   btn-line-disabled: (
+//     border: 1px solid #dbdde0,
+//     border-hover: 1px solid #C6C9CE,
+//     color: #c6c9ce,
+//     color-hover: #c6c9ce,
+//     background-color: #ffffff,
+//   ),
+//   btn-line-warning: (
+//     border: 1px solid #dbdde0,
+//     border-hover: 1px solid #C6C9CE,
+//     color: #fd616d,
+//     color-hover: #fd616d,
+//     background-color: #ffffff,
+//   ),
+// );
+
+$btn-fill-colors: (
+  btn-fill-primary: (
+    color: #ffffff,
+    color-hover: #f1f1f1,
+    background-color: #29b59b,
+    background-color-hover: #4ac8b1,
+  ),
+  btn-fill-secondary: (
+    color: #ffffff,
+    color-hover: #f1f1f1,
+    background-color: #1c1d1e,
+    background-color-hover: #3e4249,
+  ),
+  btn-fill-tertiary: (
+    color: #29b59b,
+    color-hover: #29b59b,
+    background-color: #e6f7f4,
+    background-color-hover: #ceefe9,
+  ),
+  btn-fill-warning: (
+    color: #ffffff,
+    color-hover: #ffffff,
+    background-color: #fd616d,
+    background-color-hover: #fd7882,
+  ),
+  btn-fill-disabled: (
+    border: 1px solid #b1b5bc,
+    color: #b1b5bc,
+    color-hover: #b1b5bc,
+    background-color: #f1f1f3,
+    background-color-hover: #f1f1f3,
+  ),
+);
+
+
+$shadow: (
+  shadow-primary: (
+    box-shadow: 0 2px 4px 0 rgba(28, 30, 33, 0.02),
+  ),
+  shadow-secondary: (
+    box-shadow: 0 2px 8px 0 rgba(28, 30, 33, 0.04),
+  ),
+  shadow-tertiary: (
+    box-shadow: 0 8px 16px 0 rgba(28, 30, 33, 0.08),
+  ),
+);
+
+// Map for scss @each
+$background-color: (
+  background-primary: (
+    background-color: rgba(241, 241, 243, 0.32),
+  ),
+  background-secondary: (
+    background-color: #e6f7f4,
+  ),
+  background-warning: (
+    background-color: #feeff0,
+  ),
+  background-dim: (
+    background-color: #1c1e21,
+  ),
+  background-box: (
+    background-color: rgba(241, 241, 243, 0.24),
+  ),
+);
+
+$border-color: (
+  border-primary: (
+    border: 1px solid #dbdde0,
+  ),
+  border-secondary: (
+    border: 1px solid #9ca1a9,
+  ),
+  border-warning: (
+    border: 1px solid #fd616d,
+  ),
+  border-active: (
+    border: 1px solid #29b59b,
+  ),
+  border-disabled: (
+    border: 1px solid #dbdde0,
+  ),
+);
+
+// Variables for properties within a class
+$background-primary: rgba(241, 241, 243, 0.32) !important;
+$background-secondary: #f1f1f3;
+
+$border-primary: #dbdde0;
+
+
+
+
+@each $i, $value in $body-font {
+  .#{$i} {
+    font-size: #{map-get($body-font, $i, size)}px !important;
+    font-weight: #{map-get($body-font, $i, weight)} !important;
+  }
+}
+
+
+
+@each $i, $value in $caption-font {
+  .#{$i} {
+    font-size: #{map-get($caption-font, $i, size)}px !important;
+    font-weight: #{map-get($caption-font, $i, weight)} !important;
+  }
+}
+
+// @each $i, $value in $btn-line-colors {
+//   #app .v-application,
+//   body #app {
+//     .#{$i} {
+//       border: #{map-get($btn-line-colors, $i, border)} !important;
+//       color: #{map-get($btn-line-colors, $i, color)} !important;
+//       background-color: #{map-get($btn-line-colors, $i, 'background-color')} !important;
+//       &:hover {
+//         border: #{map-get($btn-line-colors, $i, 'border-hover')} !important;
+//         color: #{map-get($btn-line-colors, $i, 'color-hover')} !important;
+//         &::before {
+//           opacity: 0;
+//         }
+//       }
+//     }
+//   }
+// }
+
+@each $i, $value in $btn-fill-colors {
+  #app .v-application,
+  body #app {
+    .#{$i} {
+      color: #{map-get($btn-fill-colors, $i, color)} !important;
+      background-color: #{map-get($btn-fill-colors, $i, 'background-color')} !important;
+      &:hover {
+        color: #{map-get($btn-fill-colors, $i, 'color-hover')} !important;
+        background-color: #{map-get($btn-fill-colors, $i, 'background-color-hover')} !important;
+        &::before {
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+@each $i, $value in $background-color {
+  .#{$i} {
+    background-color: #{map-get($background-color, $i, 'background-color')} !important;
+  }
+}
+
+@for $i from 1 through 30 {
+  .mb-#{$i} {
+    margin-bottom: #{$i * 4}px !important;
+  }
+  .ml-#{$i} {
+    margin-left: #{$i * 4}px !important;
+  }
+  .mr-#{$i} {
+    margin-right: #{$i * 4}px !important;
+  }
+  .mt-#{$i} {
+    margin-top: #{$i * 4}px !important;
+  }
+}
+.one-line-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.two-line-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+
+/* Flex 관련 CSS */
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-auto {
+  flex: 0 0 auto;
+}
+
+.flex {
+  display: flex;
+  display: -ms-flexbox;
+}
+
+.flex-justify-start {
+  display: flex;
+  display: -ms-flexbox;
+  justify-content: flex-start;
+  -ms-flex-pack: center;
+}
+
+.flex-justify-end {
+  display: flex;
+  display: -ms-flexbox;
+  justify-content: flex-end;
+}
+
+.flex_justify_center {
+  display: flex;
+  display: -ms-flexbox;
+  justify-content: center;
+  -webkit-justify-content: center;
+}
+
+.flex-justify-space-between {
+  display: flex;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+}
+
+.flex_align_center {
+  display: flex;
+  display: -ms-flexbox;
+  align-items: center;
+  -ms-flex-align: center;
+}
+
+.flex-center {
+  display: flex;
+  display: -ms-flexbox;
+  justify-content: center;
+  align-items: center;
+  -ms-flex-align: center;
+}
+
+.flex_direction_column {
+  flex-direction: column;
+}
+
+.flex-container {
+  display: flex;
+  display: -ms-flexbox;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+}
+
+.w100p {
+  width: 100%;
+}
+
+#no-background {
+  background: none !important;
+}
+

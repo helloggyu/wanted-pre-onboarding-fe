@@ -1,11 +1,12 @@
 import React from 'react';
-
-import Textfield from '../common-ui/Textfield';
+import TextField from '../common-ui/TextField';
+import '../../styles/common.scss';
 const UserInfoForm = () => {
   return (
     <>
-      <div>
-        <Textfield />
+      <div className="flex flex_direction_column">
+        <TextField />
+        <TextField />
       </div>
     </>
   );
