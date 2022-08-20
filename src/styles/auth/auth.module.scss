@@ -1,0 +1,33 @@
+.auth{
+
+  &__wrapper{
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    @media (min-width: 1024px) {
+      width: 80%;
+      max-width: 32rem;
+    }
+  }
+
+  &__title{
+    font-size: 20px;
+  }
+
+  &__inner_wrapper{
+    margin: 20px 0;
+  }
+
+  &__sub_title{
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
+
+  &__mt_3{
+    margin-top: 24px;
+  }
+
+}
+
+
+

@@ -1,10 +1,13 @@
 import React from 'react';
+import '../../styles/common.scss';
 import styled from 'styled-components';
 
-const Textfield = ({ value, placeholder }) => {
+const Textfield = ({ type, value, placeholder }) => {
   return (
     <>
-      <Input type="text" name="value" value={value} placeholder={placeholder} />
+      <div>
+        <Input type={type} name="value" value={value} placeholder={placeholder} />
+      </div>
     </>
   );
 };
@@ -12,7 +15,7 @@ const Textfield = ({ value, placeholder }) => {
 const Input = styled.input`
   border: border-active;
   border-radius: 5px;
-  width: w100p;
+  width: 100%;
   padding: 10px;
 `;
 

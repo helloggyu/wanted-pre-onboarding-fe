@@ -1,6 +1,6 @@
-import './styles/mixin.scss';
 import './styles/reset.scss';
 import './styles/common.scss';
+
 import { Routes, Route } from 'react-router-dom';
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
@@ -8,7 +8,7 @@ import Todo from './pages/Todo';
 
 const App = () => {
   return (
-    <div>
+    <div className="flex-container w100p h100v background-primary">
       <Routes>
         <Route path="/" element={<SignIn />} />
         <Route path="sign-up" element={<SignUp />} />
