@@ -8,13 +8,11 @@ import Todo from './pages/Todo';
 
 const App = () => {
   return (
-    <div className="flex-container w100p h100v background-primary">
-      <Routes>
-        <Route path="/" element={<SignIn />} />
-        <Route path="sign-up" element={<SignUp />} />
-        <Route path="todo" element={<Todo />} />
-      </Routes>
-    </div>
+    <Routes>
+      <Route path="/" element={<SignIn />} />
+      <Route path="sign-up" element={<SignUp />} />
+      <Route path="todo" element={<Todo />} />
+    </Routes>
   );
 };
 

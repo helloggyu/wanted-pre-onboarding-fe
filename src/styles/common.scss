@@ -180,7 +180,7 @@ $border-primary: #dbdde0;
       width: 100%;
       padding: 10px;
       font-size: 14px;
-      border-radius: 10px;
+      border-radius: 5px;
       border: #{map-get($btn-line-colors, $i, border)} !important;
       color: #{map-get($btn-line-colors, $i, color)} !important;
       background-color: #{map-get($btn-line-colors, $i, 'background-color')} !important;
@@ -200,7 +200,7 @@ $border-primary: #dbdde0;
       width: 100%;
       padding: 10px;
       font-size: 14px;
-      border-radius: 10px;
+      border-radius: 5px;
       color: #{map-get($btn-fill-colors, $i, color)} !important;
       background-color: #{map-get($btn-fill-colors, $i, 'background-color')} !important;
       &:hover {

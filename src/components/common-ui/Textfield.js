@@ -2,7 +2,7 @@ import React from 'react';
 import '../../styles/common.scss';
 import styled from 'styled-components';
 
-const Textfield = ({ type, value, placeholder }) => {
+const TextField = ({ type, value, placeholder }) => {
   return (
     <>
       <div>
@@ -13,10 +13,11 @@ const Textfield = ({ type, value, placeholder }) => {
 };
 
 const Input = styled.input`
-  border: border-active;
+  border: 1px solid #dbdde0;
   border-radius: 5px;
   width: 100%;
   padding: 10px;
+  font-size: 16px;
 `;
 
-export default Textfield;
+export default TextField;

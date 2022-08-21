@@ -1,14 +1,63 @@
-@import '../common.scss';
+@import '../mixin.scss';
+
 .todo{
-  background-color: #fff;
-  border-radius: 5px;
-  padding: 20px;
-  @media (min-width: 1024px) {
-    width: 80%;
-    max-width: 32rem;
+  background-color: #f1f1f3;
+  height: 100vh;
+  @include flex-align($justify-con:center);
+
+  &__wrapper{
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    @media (min-width: 1024px) {
+      width: 80%;
+      max-width: 32rem;
+    }
+  }
+  
+  &__title{
+    font-size: 20px;
   }
 
-  // &__add_form{
-  //   dis
-  // }
+  &__list{
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  &__flex{
+    display: flex;
+    align-items: center;
+  }
+
+  &__mr10{
+    margin-right: 10px;
+  }
+
+  &__mr10{
+    margin-right: 10px;
+  }
+
+  &__button_wrap{
+    margin: 0 0 10px 0;
+    display: flex;
+  }
+
+  &__view_list{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    justify-content: space-between;
+  }
+
+  &__add_form{
+    display: flex;
+    width: 100%;
+    &>div{
+      flex: 1 0 80%;
+    }
+    &>button{
+      flex: 1 0 5%;
+      margin-left: 10px;
+    }
+  }
 }
