@@ -1,0 +1,14 @@
+@import '../common.scss';
+.todo{
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  @media (min-width: 1024px) {
+    width: 80%;
+    max-width: 32rem;
+  }
+
+  // &__add_form{
+  //   dis
+  // }
+}

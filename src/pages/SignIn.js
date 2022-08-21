@@ -1,6 +1,6 @@
 import React from 'react';
 import TextField from '../components/common-ui/TextField';
-import '../styles/common.scss';
+import Button from '../components/common-ui/Button';
 import styles from '../styles/auth/auth.module.scss';
 const SignIn = () => {
   return (
@@ -17,7 +17,7 @@ const SignIn = () => {
             <TextField type="password" placeholder="비밀번호를 입력해주세요" />
           </div>
         </div>
-        <button className="btn-line-secondary">로그인</button>
+        <Button text="로그인" type="button" styleType="btn-line-secondary" />
       </div>
     </>
   );
