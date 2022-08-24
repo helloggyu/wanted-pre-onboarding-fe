@@ -4,8 +4,8 @@ import Button from '../components/common-ui/Button';
 import CheckBox from '../components/common-ui/CheckBox';
 import styles from '../styles/todo/Todo.module.scss';
 import { FcPlus } from 'react-icons/fc';
-// import { GET_TODOS } from '../api/todo-api';
-// import aptc from '../utils/index.js';
+import { GET_TODOS } from '../api/todo-api';
+import aptc from '../utils/index.js';
 const Todo = () => {
   //할일 추가 createTodo
   const [createTodo, setCreateTodo] = useState('');
@@ -17,10 +17,9 @@ const Todo = () => {
   const [isEditing, setIsEditing] = useState(false);
   const [editedTodo, setEditedTodo] = useState('');
 
-  // const getTodos = async () => {
-  //   const result = await aptc(GET_TODOS());
-  //   console.log(result);
-  // };
+  const getTodos = async () => {
+    await aptc(GET_TODOS);
+  };
 
   const handleCompletedChange = (cheked) => {
     setIsCompleted(cheked);
@@ -34,7 +33,7 @@ const Todo = () => {
     setEditedTodo(value);
   };
 
-  // getTodos();
+  getTodos();
 
   return (
     <div className={styles.todo}>

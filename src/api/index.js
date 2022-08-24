@@ -2,6 +2,7 @@ import axios from 'axios';
 
 const headers = {
   'Content-Type': 'applocation/json',
+  Accept: 'application/json',
 };
 
 //const baseURL = 'http://localhost:8080/"';

@@ -1,10 +1,9 @@
 import React from 'react';
 import '../../styles/common.scss';
 
-const Button = ({ text, type, styleType }) => {
-  console.log('button component');
+const Button = ({ text, type, styleType, handleClick }) => {
   return (
-    <button type={type} className={styleType}>
+    <button type={type} className={styleType} onClick={handleClick}>
       <span>{text}</span>
     </button>
   );

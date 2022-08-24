@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 const CheckBox = ({ checked, handleChange, label, id }) => {
-  console.log('checkbox component');
   return (
     <CheckboxContainer>
       <Label htmlFor={id} checked={checked}>

@@ -3,7 +3,6 @@ import '../../styles/common.scss';
 import styled from 'styled-components';
 
 const TextField = ({ type, value, placeholder, handleChange, useErrorMsg }) => {
-  console.log('err', useErrorMsg);
   return (
     <>
       <div>

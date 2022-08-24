@@ -177,6 +177,7 @@ $border-primary: #dbdde0;
 
 @each $i, $value in $btn-line-colors {
     .#{$i} {
+      width: 100%;
       padding: 10px;
       font-size: 14px;
       border-radius: 5px;
@@ -197,7 +198,7 @@ $border-primary: #dbdde0;
 @each $i, $value in $btn-fill-colors {
     .#{$i} {
       width: 100%;
-      padding: 8px;
+      padding: 10px;
       font-size: 14px;
       border-radius: 5px;
       color: #{map-get($btn-fill-colors, $i, color)} !important;
