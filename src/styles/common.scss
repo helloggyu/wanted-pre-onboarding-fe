@@ -31,8 +31,8 @@ $btn-line-colors: (
   btn-line-primary: (
     border: 1px solid #dbdde0,
     border-hover: 1px solid #C6C9CE,
-    color: #29b59b,
-    color-hover: #29b59b,
+    color: #42B883,
+    color-hover: #42B883,
     background-color: #ffffff,
   ),
   btn-line-secondary: (
@@ -62,7 +62,7 @@ $btn-fill-colors: (
   btn-fill-primary: (
     color: #ffffff,
     color-hover: #f1f1f1,
-    background-color: #29b59b,
+    background-color: #42B883,
     background-color-hover: #4ac8b1,
   ),
   btn-fill-secondary: (
@@ -72,8 +72,8 @@ $btn-fill-colors: (
     background-color-hover: #3e4249,
   ),
   btn-fill-tertiary: (
-    color: #29b59b,
-    color-hover: #29b59b,
+    color: #42B883,
+    color-hover: #42B883,
     background-color: #e6f7f4,
     background-color-hover: #ceefe9,
   ),
@@ -135,7 +135,7 @@ $border-color: (
     border: 1px solid #fd616d,
   ),
   border-active: (
-    border: 1px solid #29b59b,
+    border: 1px solid #42B883,
   ),
   border-disabled: (
     border: 1px solid #dbdde0,
@@ -177,7 +177,6 @@ $border-primary: #dbdde0;
 
 @each $i, $value in $btn-line-colors {
     .#{$i} {
-      width: 100%;
       padding: 10px;
       font-size: 14px;
       border-radius: 5px;
@@ -198,7 +197,7 @@ $border-primary: #dbdde0;
 @each $i, $value in $btn-fill-colors {
     .#{$i} {
       width: 100%;
-      padding: 10px;
+      padding: 8px;
       font-size: 14px;
       border-radius: 5px;
       color: #{map-get($btn-fill-colors, $i, color)} !important;
@@ -212,11 +211,6 @@ $border-primary: #dbdde0;
       }
     }
   }
-
-
-
-
-
 
 
 @each $i, $value in $background-color {

@@ -7,7 +7,7 @@ export const createTodo = (formData) => {
   return api.post(url, formData);
 };
 
-export const getTodos = (formData) => {
+export const GET_TODOS = (formData) => {
   const url = '/todos';
   return api.get(url, formData);
 };

@@ -8,15 +8,19 @@
   &__wrapper{
     background-color: #fff;
     border-radius: 10px;
+    border: 2px solid #42B883;
     padding: 20px;
     @media (min-width: 1024px) {
       width: 80%;
-      max-width: 32rem;
+      max-width: 36rem;
     }
   }
   
   &__title{
-    font-size: 20px;
+    font-size: 32px;
+    color:#1c1d1e;
+    font-weight: 800;
+    margin-bottom: 20px;
   }
 
   &__list{
@@ -24,40 +28,52 @@
     font-weight: 500;
   }
 
+
   &__flex{
     display: flex;
     align-items: center;
   }
 
-  &__mr10{
-    margin-right: 10px;
-  }
-
-  &__mr10{
-    margin-right: 10px;
-  }
-
   &__button_wrap{
-    margin: 0 0 10px 0;
     display: flex;
   }
 
   &__view_list{
-    display: flex;
-    align-items: center;
-    margin: 20px 0;
-    justify-content: space-between;
+    @include flex-align($justify-con:space-between);
+    padding: 5px 0;
+    border-bottom: 1px dotted #dbdde0;
+  }
+
+  &__edit_form{
+    @include flex-align($justify-con:space-between);
+
+    // &>div:first-child{
+    //   width: 80%;
+    // }
+
+    &>div:first-child{
+      flex: 1 0 5;
+    }
+    &>div:nth-child(2){
+      flex: 1 1 70%;
+    }
+    &>div:last-child{
+      display: flex;
+      margin-left: 10px;
+    }
+
   }
 
   &__add_form{
-    display: flex;
-    width: 100%;
+    @include flex-align($justify-con:space-between);
+    margin-top: 20px;
     &>div{
-      flex: 1 0 80%;
+      flex: 1 1 90%;
     }
     &>button{
-      flex: 1 0 5%;
+      flex: 1 1 10%;
       margin-left: 10px;
     }
   }
+
 }

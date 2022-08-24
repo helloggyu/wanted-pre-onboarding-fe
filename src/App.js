@@ -7,6 +7,7 @@ import SignUp from './pages/SignUp';
 import Todo from './pages/Todo';
 
 const App = () => {
+  console.log('app component');
   return (
     <Routes>
       <Route path="/" element={<SignIn />} />

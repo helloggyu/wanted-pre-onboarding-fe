@@ -4,8 +4,8 @@ const headers = {
   'Content-Type': 'applocation/json',
 };
 
-const baseURL = 'http://localhost:8080/"';
-//const baseURL = 'https://5co7shqbsf.execute-api.ap-northeast-2.amazonaws.com/production/';
+//const baseURL = 'http://localhost:8080/"';
+const baseURL = 'https://5co7shqbsf.execute-api.ap-northeast-2.amazonaws.com/production/';
 
 const api = axios.create({
   baseURL,
